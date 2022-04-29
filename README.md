@@ -2,7 +2,7 @@
 
 Python script to convert svg to png given a folder
 
-## Pre-requesitites
+## Pre-requesites
 
 You will need latest Python installed.
 
