@@ -19,6 +19,12 @@ This script uses cairosvg python package to render png from svg.
 Make sure you have all the pre-requesite dependancies installed on
 your flavout of OS otherwise pip will fail to install
 
+On mac os you must install these packages via brew:
+
+```
+brew install cairo
+```
+
 ```
 pip3 install cairosvg
 pip freeze > requirements.txt
