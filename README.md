@@ -45,6 +45,6 @@ through the folders looking for svg file. If a file is found it will be converte
 
 ```
 python3 svgconverter.py
-
-Processed 1 svg files
+Enter path to svg images:/Users/auser/Downloads/Icons           
+Processed 10 svg files
 ```
