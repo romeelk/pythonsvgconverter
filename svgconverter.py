@@ -1,4 +1,5 @@
 import os
+import sys
 import cairosvg
 
 def traverse_folder(folder,count):
@@ -23,9 +24,9 @@ def convert_svg_to_png(file_path):
 
 path_to_svg = input("Enter path to svg images:")
 
-
 if(not os.path.exists(path_to_svg)):
     print(f"The path:{path_to_svg} cannot be found")
+    sys.exit(-1)
 
 file_count=0
 traverse_folder(path_to_svg,file_count)
