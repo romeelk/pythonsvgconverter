@@ -7,7 +7,6 @@ def traverse_folder(folder,count):
     for name in os.listdir(folder):
         path = os.path.join(folder, name)
         if(os.path.isdir(path)):
-            print(path)
             traverse_folder(path,count)
         else:
             if(path.endswith(".svg")):
@@ -18,9 +17,14 @@ def traverse_folder(folder,count):
    
 
 def convert_svg_to_png(file_path):
-    svg_file = os.path.basename(file_path)
-    png_file = os.path.dirname(file_path) + "/" +os.path.splitext(svg_file)[0] + ".png"
-    cairosvg.svg2png(url=file_path, write_to=png_file,scale=5)
+    try:
+        svg_file = os.path.basename(file_path)
+        png_file = os.path.dirname(file_path) + "/" +os.path.splitext(svg_file)[0] + ".png"
+        cairosvg.svg2png(url=file_path, write_to=png_file,scale=5)
+        print(f"Successfully converted {svg_file}")
+    except Exception as exception:
+        print(f"Could not convert svg file:{svg_file}",exception)
+
 
 path_to_svg = input("Enter path to svg images:")
 
