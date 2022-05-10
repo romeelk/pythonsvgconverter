@@ -2,6 +2,10 @@ import os
 import sys
 import cairosvg
 
+"""
+Given a path recurse through each folder until no
+more subdirectories found
+"""
 def traverse_folder(folder,count):
     global file_count
     for name in os.listdir(folder):
